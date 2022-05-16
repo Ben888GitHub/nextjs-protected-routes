@@ -4,13 +4,13 @@ import Head from 'next/head';
 import { useAuth } from '../context/auth-context';
 
 function Dashboard() {
-	const { isUserAuthenticated, currentToken } = useAuth();
-	// const [currentToken, setCurrentToken] = useState('');
+	const { isUserAuthenticated } = useAuth();
+	const [currentToken, setCurrentToken] = useState('');
 
-	// useEffect(() => {
-	// 	isUserAuthenticated();
-	// 	setCurrentToken(localStorage.token !== 'undefined' && localStorage.token);
-	// }, []);
+	useEffect(() => {
+		isUserAuthenticated();
+		setCurrentToken(localStorage.token !== 'undefined' && localStorage.token);
+	}, []);
 
 	return (
 		<>

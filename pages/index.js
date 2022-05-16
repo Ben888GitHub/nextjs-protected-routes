@@ -8,12 +8,12 @@ import { useAuth } from '../context/auth-context';
 
 export default function Home() {
 	const router = useRouter();
-	const { setUserAuthInfo, currentToken } = useAuth();
-	// const [currentToken, setCurrentToken] = useState('');
+	const { setUserAuthInfo, authState } = useAuth();
+	const [currentToken, setCurrentToken] = useState('');
 
-	// useEffect(() => {
-	// 	setCurrentToken(localStorage.token !== 'undefined' && localStorage.token);
-	// }, [authState.token]);
+	useEffect(() => {
+		setCurrentToken(localStorage.token !== 'undefined' && localStorage.token);
+	}, [authState.token]);
 
 	return (
 		<div className={styles.container}>
