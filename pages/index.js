@@ -13,7 +13,7 @@ export default function Home() {
 
 	useEffect(() => {
 		setCurrentToken(localStorage.token !== 'undefined' && localStorage.token);
-	}, [authState.token]);
+	}, [authState]);
 
 	return (
 		<div className={styles.container}>

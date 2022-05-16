@@ -17,12 +17,11 @@ function Dashboard() {
 			<Head>
 				<title>Dashboard</title>
 			</Head>
-			{currentToken && (
-				<div>
-					<h2>Dashboard</h2>
-					<h3>Hello, {currentToken}</h3>
-				</div>
-			)}
+
+			<div>
+				<h2>Dashboard</h2>
+				<h3>Hello, {currentToken && currentToken}</h3>
+			</div>
 		</>
 	);
 }
